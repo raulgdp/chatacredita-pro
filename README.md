@@ -27,12 +27,12 @@ This repository contains the **source code**, **benchmark**, and **evaluation ha
 
 We compare four architectures under identical retrieval conditions (Qdrant Cloud, 79,879 chunks, BGE-M3+BM25+RRF+Reranker):
 
-| System | Architecture | RAGAS avg | Latency (s) | Cost/query |
+| System | Architecture | RAGAS avg | Latency (s) | DRE |
 |--------|-------------|-----------|-------------|------------|
-| **Sys-A** | Sequential RAG (baseline) | 0.785 | **4.1 ± 0.8** | **$0.0004** |
-| **Sys-B** | Inference-time RAFT | 0.696 | 38.0 ± 16.3 | $0.0007 |
-| **Sys-C** | Multi-Agent ReAct ⭐ | **0.838** | 99.8 ± 72.4 | $0.0021 |
-| **Sys-D** | LangGraph | 0.729 | 29.4 ± 10.4 | $0.0012 |
+| **Sys-A** | Sequential RAG (baseline) | 0.785 | **4.1 ± 0.8** |0.832 |
+| **Sys-B** | Inference-time RAFT | 0.696 | 38.0 ± 16.3 | 0.696 |
+| **Sys-C** | Multi-Agent ReAct ⭐ | **0.838** | 99.8 ± 72.4 | **0.437** |
+| **Sys-D** | LangGraph | 0.729 | 29.4 ± 10.4 | 0.390 |
 
 **Key findings:**
 - **ReAct orchestration** achieves the highest quality (+0.053 RAGAS over baseline)
