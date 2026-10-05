@@ -5,7 +5,7 @@
 
 This repository contains the **source code**, **benchmark**, and **evaluation harnesses** for our paper submitted to TACL 2027. It presents the first controlled comparison of four LLM-RAG architectures for Colombian university accreditation (CNA framework, Decree 1330/2019, EISC — Universidad del Valle), isolating architecture as the sole independent variable under a shared retrieval backbone.
 
-> **Raúl García** · EISC, Universidad del Valle, Cali, Colombia
+> **Raúl Ernesto Gutierrez de Piñerez Reyes** · EISC, Universidad del Valle, Cali, Colombia
 > HuggingFace: [raulgdp](https://huggingface.co/raulgdp)
 
 ---
