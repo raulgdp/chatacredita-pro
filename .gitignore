@@ -1,0 +1,92 @@
+<<<<<<< HEAD
+# ── Credenciales y tokens ─────────────────────────────────────
+.env
+*.env
+.env.*
+openrouter_key.txt
+hf_token.txt
+secrets.json
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+=======
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+>>>>>>> ce5da59298b88a7b111700b1775718eb8fc4bc0d
+.Python
+*.egg-info/
+dist/
+build/
+<<<<<<< HEAD
+.eggs/
+
+# ── Modelos grandes — van en HuggingFace, NO en GitHub ────────
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+
+# ── Datos sintéticos brutos (> 500 MB) ────────────────────────
+data/synthetic_raw/
+data/synthetic_verified/verified.jsonl
+data/synthetic_verified/rejected.jsonl
+data/synthetic_verified/checkpoint.json
+
+# ── Resultados de evaluación ──────────────────────────────────
+*.csv
+results/
+outputs/
+multijuez_results_v2.csv
+multijuez_summary_v2.json
+resultados_geval.csv
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── IDEs ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+=======
+
+# Data — do not commit large files
+*.pkl
+*.json
+!benchmark/benchmark_342.json
+!benchmark/benchmark_178_new.json
+dataset_raft_v4.json
+corpus_lc.pkl
+results_acredita.pkl
+results_sysC.json
+results_sysB_sysD.json
+
+# PDFs
+pdfs/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+>>>>>>> ce5da59298b88a7b111700b1775718eb8fc4bc0d

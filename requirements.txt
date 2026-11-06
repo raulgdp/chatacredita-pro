@@ -1,0 +1,33 @@
+# ChatAcredita PRO — Dependencies
+# pip install -r requirements.txt --break-system-packages
+
+# ── Web UI ──────────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── LLM / API ────────────────────────────────────────────────────────────────
+openai>=1.30.0
+python-dotenv>=1.0.0
+
+# ── Vector store ─────────────────────────────────────────────────────────────
+qdrant-client>=1.9.0
+
+# ── Embeddings & Reranking ────────────────────────────────────────────────────
+sentence-transformers>=2.7.0
+FlagEmbedding>=1.2.0          # BGE-Reranker-v2-m3
+torch>=2.3.0
+
+# ── Sparse retrieval ─────────────────────────────────────────────────────────
+rank-bm25>=0.2.2
+
+# ── LangGraph (Sys-D only) ────────────────────────────────────────────────────
+langgraph>=0.1.0
+langchain>=0.2.0
+langchain-openai>=0.1.0
+
+# ── PDF / Long-Context ────────────────────────────────────────────────────────
+pymupdf>=1.24.0
+pymupdf4llm>=0.0.17
+
+# ── Data ─────────────────────────────────────────────────────────────────────
+numpy>=1.26.0
+pandas>=2.0.0
