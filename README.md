@@ -1,12 +1,12 @@
 # ChatAcredita PRO
 
-[![Paper](https://img.shields.io/badge/Paper-IP%26M%202026-blue)](https://www.sciencedirect.com/journal/information-processing-and-management)
+[![Paper](https://img.shields.io/badge/Paper-Under%20Review-orange)](https://github.com/raulgdp/chatacredita-pro)
 [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-raulgdp-yellow)](https://huggingface.co/raulgdp)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)](LICENSE)
 
 **Fine-tuned LLMs with RAG-VSD filtering for Colombian university accreditation QA (CNA / Decreto 1330 de 2019)**
 
-> Gutiérrez de Piñerez Reyes, R. E. *"ChatAcredita PRO: Fine-tuned LLMs with RAG-VSD Filtering for Colombian University Accreditation QA"* — Information Processing & Management, 2026.
+> Gutiérrez de Piñerez Reyes, R. E. *"ChatAcredita PRO: Fine-tuned LLMs with RAG-VSD Filtering for Colombian University Accreditation QA"* — manuscript under review, 2025.
 
 ---
 
@@ -201,13 +201,12 @@ The architecture comparison study (SYS-A / SYS-B / SYS-C / SYS-D) that uses the 
 ## Citation
 
 ```bibtex
-@article{gutierrez2026chatacredita,
-  title   = {{ChatAcredita PRO}: Fine-tuned {LLMs} with {RAG-VSD} Filtering
-             for {Colombian} University Accreditation {QA}},
-  author  = {Gutiérrez de Piñerez Reyes, Raúl Ernesto},
-  journal = {Information Processing \& Management},
-  year    = {2026},
-  note    = {EISC, Universidad del Valle, Cali, Colombia}
+@unpublished{gutierrez2025chatacredita,
+  title  = {{ChatAcredita PRO}: Fine-tuned {LLMs} with {RAG-VSD} Filtering
+            for {Colombian} University Accreditation {QA}},
+  author = {Gutiérrez de Piñerez Reyes, Raúl Ernesto},
+  note   = {Manuscript submitted for publication. EISC, Universidad del Valle, Cali, Colombia},
+  year   = {2025},
 }
 ```
 
