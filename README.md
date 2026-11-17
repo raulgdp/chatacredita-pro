@@ -26,20 +26,26 @@ All models are fine-tuned with QLoRA (r=32, α=64) on the RAG-VSD filtered datas
 
 ```
 chatacredita-pro/
+├── Data-Raft/
+│   ├── generar_dataset_mejorado.py  ← RAFT-based Q&A dataset generator (Groq API)
+│   └── README.md                    ← Usage, arguments, pipeline and output format
+├── Gpt-acredita/
+│   ├── llms-train-v2.py             ← GPT-2-style 350M pretraining from scratch
+│   └── README.md                    ← HuggingFace model card for gpt-acredita-350M
 ├── data/
-│   ├── benchmark_142q.jsonl      ← 142-question CNA evaluation benchmark
+│   ├── benchmark_142q.jsonl         ← 142-question CNA evaluation benchmark
 │   └── README.md
 ├── evaluation/
-│   ├── ragas_multijuez.py        ← 5-judge RAGAS ensemble evaluation
-│   ├── geval_acredita.py         ← G-Eval (GPT-4o Mini judge, 4 dimensions)
-│   └── benchmark_3modelos.py     ← Generate answers for all 3 models
+│   ├── ragas_multijuez.py           ← 5-judge RAGAS ensemble evaluation
+│   ├── geval_acredita.py            ← G-Eval (GPT-4o Mini judge, 4 dimensions)
+│   └── benchmark_3modelos.py        ← Generate answers for all 3 models
 ├── rag_vsd/
-│   ├── 02_filter_rag.py          ← RAG-VSD filtering pipeline
-│   ├── config.py                 ← Shared configuration & thresholds
+│   ├── 02_filter_rag.py             ← RAG-VSD filtering pipeline
+│   ├── config.py                    ← Shared configuration & thresholds
 │   └── utils/
-│       └── qdrant_client.py      ← RAGVerifier (τ_overlap, τ_query, τ_tech)
+│       └── qdrant_client.py         ← RAGVerifier (τ_overlap, τ_query, τ_tech)
 └── training/
-    └── training_config.yaml      ← QLoRA hyperparameters
+    └── training_config.yaml         ← QLoRA hyperparameters
 ```
 
 ---
@@ -77,9 +83,9 @@ The RAG-VSD (RAG Verification by Semantic Distance) filter accepts a synthetic p
 
 | Threshold | Symbol | Value | Description |
 |-----------|--------|-------|-------------|
-| Lexical overlap | τ_overlap | 0.30 | ≥ 30% of response tokens appear in retrieved chunks |
-| Semantic similarity | τ_query | 0.55 | cosine(query, top-1 chunk) ≥ 0.55 |
-| CNA term density | τ_tech | 0.40 | ≥ 40% of response tokens are CNA technical terms |
+| Lexical overlap | τ_o | 0.15 | Jaccard overlap between response and retrieved chunks ≥ 0.15 |
+| Semantic answerability | τ_q | 0.52 | cosine(query, top-1 chunk) ≥ 0.52 |
+| CNA term density | τ_t | 0.26 | CNA terminology density in response ≥ 0.26 |
 
 **Result:** 9,847 / 15,000 pairs accepted (65.6%), +29.4 pp faithfulness gain vs. unfiltered.
 
